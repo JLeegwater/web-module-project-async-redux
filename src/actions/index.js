@@ -4,10 +4,10 @@ export const getPokemon = () => {
   return (dispatch) => {
     dispatch(fetchStart());
     axios
-      .get("https://pokeapi.co/api/v2/pokemon-species/4/")
+      .get("https://pokeapi.co/api/v2/pokemon/1")
       .then((res) => {
         console.log(res);
-        dispatch(fetchSuccess(res.data.results));
+        dispatch(fetchSuccess(res.data));
       })
       .catch((err) => {
         dispatch(fetchFail(err));

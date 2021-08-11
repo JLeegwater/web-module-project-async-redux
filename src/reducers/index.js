@@ -1,18 +1,7 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from "./../actions";
 
 const initialState = {
-  pokemon: {
-    name: {
-      title: "",
-      first: "",
-      last: "",
-    },
-    picture: {
-      large: "",
-      medium: "",
-      thumbnail: "",
-    },
-  },
+  pokemon: {},
   isFetching: false,
   error: "",
 };

@@ -25,10 +25,13 @@ const Pokemon = (props) => {
   return (
     <>
       <div>
-        <h2>
-          Say Hi to: {pokemon.name.first} {pokemon.name.last}
-        </h2>
-        <img src={pokemon.picture.large} />
+        <h2>Say Hi to: {pokemon.name}</h2>
+        {pokemon.name && (
+          <img
+            alt={pokemon.name}
+            src={pokemon.sprites["other"]["official-artwork"]["front_default"]}
+          />
+        )}
       </div>
       <button onClick={handleClick}>Get new pokemon</button>
       <button
