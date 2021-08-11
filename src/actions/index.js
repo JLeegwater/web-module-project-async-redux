@@ -4,7 +4,9 @@ export const getPokemon = () => {
   return (dispatch) => {
     dispatch(fetchStart());
     axios
-      .get("https://pokeapi.co/api/v2/pokemon/1")
+      .get(
+        `https://pokeapi.co/api/v2/pokemon/${Math.ceil(Math.random() * 151)}`
+      )
       .then((res) => {
         console.log(res);
         dispatch(fetchSuccess(res.data));
