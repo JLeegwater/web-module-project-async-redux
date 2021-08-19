@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { getPokemon, fetchFail } from "./../actions";
 import { connect } from "react-redux";
-import axios from "axios";
 
 const Pokemon = (props) => {
   const { pokemon, isFetching, error } = props;
