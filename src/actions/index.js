@@ -8,7 +8,7 @@ export const getPokemon = () => {
         `https://pokeapi.co/api/v2/pokemon/${Math.ceil(Math.random() * 151)}`
       )
       .then((res) => {
-        console.log(res);
+        //console.log(res);
         dispatch(fetchSuccess(res.data));
       })
       .catch((err) => {
